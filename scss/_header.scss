@@ -1,0 +1,318 @@
+.bg-header {
+	background-color: #222;
+	position: relative;
+}
+
+.header {
+
+	display: flex;
+	justify-content: space-between;
+	padding: 18px 0px 18px 0px;
+
+
+	.header__left {
+		display: flex;
+		align-items: center;
+		gap: 2.5rem;
+	}
+}
+
+
+.header_logo {
+	margin-right: 41px;
+	text-decoration: none;
+}
+
+.header_icon {
+
+	fill: #fff;
+	transition: all 0.2s linear
+}
+
+.header_icon:hover {
+
+	fill: #F16D7F;
+	transition: all 0.2s linear
+}
+
+
+.header__right {
+
+	align-items: center;
+	display: flex;
+}
+
+.menu {
+
+	margin-right: 25px;
+}
+
+.menu__list {
+
+	background-color: white;
+	padding: 16px 17px 37px 35px;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	box-shadow: 0px 10px 10px #f16d7f;
+	transition: transform 0.2s linear;
+	z-index: 10000;
+	transform: scaleX(0);
+	display: flex;
+	flex-direction: column;
+}
+
+.menu__list h6 {
+
+	font-size: 14px;
+	line-height: 1.2;
+	color: #000;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 24px;
+}
+
+.menu__list ul {
+
+	font-size: 14px;
+	line-height: 1.2;
+	color: #f16d7f;
+	font-weight: 400;
+}
+
+.menu__list ul .menu-link {
+
+	font-size: 14px;
+	line-height: 1.2;
+	color: #f16d7f;
+	font-weight: 400;
+}
+
+.menu__list ul .menu-link:hover {
+
+	text-decoration: none;
+	transition: all 0.2s linear;
+}
+
+.menu__list ul:not(:last-child) {
+
+	margin-bottom: 20px;
+}
+
+.menu__list ul li {
+
+	margin-top: 12px;
+	margin-left: 22px;
+	text-transform: capitalize;
+	cursor: pointer;
+	padding-right: 60px;
+	list-style-type: none;
+
+
+}
+
+.menu__list ul a {
+
+	font-size: 14px;
+	line-height: 1.2;
+	color: #6f6e6e;
+	font-weight: 400;
+	transition: all 0.2s linear;
+	text-decoration: none;
+}
+
+.menu__list ul:hover {
+
+	font-size: 14px;
+	line-height: 1.2;
+	color: #f16d7f;
+	font-weight: 400;
+}
+
+.hover-link {
+	display: block;
+	transition: all 0.2s linear;
+
+	&:hover {
+		color: #F16D7F;
+		transform: scale(1.1);
+	}
+}
+
+.menu__opened {
+
+	transform: scaleX(1);
+}
+
+.btn-menu {
+
+	background: none;
+	padding: 0;
+	cursor: pointer;
+	border: none;
+}
+
+.btn-menu__close {
+
+	background: none;
+	cursor: pointer;
+	border: none;
+	margin-bottom: 5px;
+	transition: all 0.2s linear;
+	fill: #6f6e6e;
+	margin-left: auto;
+}
+
+.btn-menu__close:hover {
+
+	transform: scale(1.2);
+	fill: #f16d7f;
+}
+
+.header_item:not(:last-child) {
+
+	margin-right: 21px;
+}
+
+
+// !MAIN
+
+.bg-main {
+	background-color: #F1E4E6;
+	margin-bottom: 65px;
+}
+
+
+.main__text {
+	border-left: 12px solid #F16D7F;
+	padding-left: 1rem;
+	// margin-left: 650px;
+	width: 60%;
+}
+
+
+.main {
+	display: flex;
+	align-items: center;
+	min-height: 363px;
+	// position: relative;
+
+	.main__img {
+		// position: absolute;
+		// left: -200px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	h1 {
+		width: 100%;
+		color: #222;
+		font-family: Lato;
+		font-size: 2rem;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+
+
+		.bold-text {
+			color: #222;
+			font-family: Lato;
+			font-size: 3rem;
+			font-style: normal;
+			font-weight: 900;
+			line-height: normal;
+
+		}
+
+		.color-text {
+			color: #F16D7F;
+			font-family: Lato;
+			font-size: 2rem;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+		}
+
+
+	}
+}
+
+@media (max-width: 1024px) {
+	.main {
+
+		h1 {
+			font-size: 24px;
+
+			.bold-text {
+				font-size: 44px;
+			}
+
+			.color-text {
+				font-size: 24px;
+			}
+		}
+	}
+}
+
+@media (max-width: 935px) {
+
+	.header__left {
+		padding-left: 2%;
+	}
+
+	.header__right {
+		padding-right: 2%;
+
+		.menu__list {
+			padding: 16px 17px 45px 20px;
+			right: 12px;
+
+			& h4 {
+				font-size: 12px;
+				margin-bottom: 15px;
+			}
+
+			& ul:not(:last-child) {
+				margin-bottom: 15px;
+			}
+
+			& ul li {
+				margin-top: 10px;
+				margin-left: 16px;
+				padding-right: 30px;
+			}
+		}
+	}
+}
+
+
+
+@media (max-width: 637px) {
+	.main__text {
+		width: 100%;
+	}
+}
+
+@media (max-width: 375px) {
+
+	.main {
+		min-height: 363px;
+		justify-content: center;
+
+		.main__img {
+			img {
+				display: none;
+			}
+		}
+	}
+
+	.header-none {
+		display: none;
+	}
+
+	.menu {
+		margin-right: 0px;
+	}
+}
